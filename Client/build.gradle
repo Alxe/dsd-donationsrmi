@@ -1,0 +1,19 @@
+plugins {
+    id 'application'
+}
+
+dependencies {
+    compile project(':Contract')
+}
+
+jar {
+  manifest {
+    attributes(
+      'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+      'Main-Class': 'me.alejnp.ugr.dsd.donaciones.Cliente'
+    )
+  }
+}
+
+// Define the main class for the application
+mainClassName = 'me.alejnp.ugr.dsd.donaciones.Cliente'

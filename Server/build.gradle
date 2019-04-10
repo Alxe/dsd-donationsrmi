@@ -1,0 +1,20 @@
+plugins {
+    // Apply the application plugin to add support for building an application
+    id 'application'
+}
+
+dependencies {
+    compile project(':Contract')
+}
+
+jar {
+  manifest {
+    attributes(
+      'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+      'Main-Class': 'me.alejnp.ugr.dsd.donaciones.ServidorBalanceado'
+    )
+  }
+}
+
+// Define the main class for the application
+mainClassName = 'me.alejnp.ugr.dsd.donaciones.ServidorBalanceado'

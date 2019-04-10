@@ -1,0 +1,32 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - App",
+      "request": "launch",
+      "mainClass": "me.alejnp.ugr.dsd.donaciones.App",
+      "projectName": "Client"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Cliente",
+      "request": "launch",
+      "mainClass": "me.alejnp.ugr.dsd.donaciones.Cliente",
+      "projectName": "Client"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - ServidorBalanceado",
+      "request": "launch",
+      "mainClass": "me.alejnp.ugr.dsd.donaciones.ServidorBalanceado",
+      "projectName": "Server"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - App",
+      "request": "launch",
+      "mainClass": "practica_rmi.App",
+      "projectName": "PracticaRMI"
+    }
+  ]
+}
