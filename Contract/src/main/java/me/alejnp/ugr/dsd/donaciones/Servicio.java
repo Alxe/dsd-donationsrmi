@@ -11,4 +11,5 @@ public interface Servicio extends Remote {
   boolean existe(String nombreCliente) throws RemoteException;
   boolean donar(String nombreCliente, Double cantidad) throws RemoteException;
   double consultar() throws RemoteException;
+  double consultar(String nombreCliente) throws RemoteException;
 }

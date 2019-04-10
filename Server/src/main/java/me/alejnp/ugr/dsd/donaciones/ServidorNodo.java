@@ -42,4 +42,9 @@ public class ServidorNodo implements Servicio, Serializable {
     public boolean existe(String nombreCliente) throws RemoteException {
         return transacciones.containsKey(nombreCliente);
     }
+
+    @Override
+    public double consultar(String nombreCliente) throws RemoteException {
+        return transacciones.getOrDefault(nombreCliente, 0.);
+    }
 }

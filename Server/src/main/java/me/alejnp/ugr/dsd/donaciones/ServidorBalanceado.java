@@ -19,7 +19,7 @@ public class ServidorBalanceado implements Servicio, Serializable {
     try {
       Registry registry = LocateRegistry.createRegistry(1099);
 
-      Servicio servicios[] = new Servicio[2];
+      Servicio servicios[] = new Servicio[4];
       
       for(int i = 0; i < servicios.length; ++i) {
         servicios[i] = (Servicio) UnicastRemoteObject.exportObject(new ServidorNodo(), 0);
@@ -87,6 +87,17 @@ public class ServidorBalanceado implements Servicio, Serializable {
     }
 
     return false;
+  }
+
+  @Override
+  public double consultar(String nombreCliente) throws RemoteException {
+    double sum = 0.;
+
+    for(Servicio nodo : nodos) {
+      sum += nodo.consultar(nombreCliente);
+    }
+
+    return sum;
   }
   
 }

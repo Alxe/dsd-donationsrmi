@@ -54,7 +54,13 @@ public class Cliente {
 
   void consultar(String[] args) {
     try {
-      Double cantidad = servicio.consultar();
+      Double cantidad;
+
+      if(args.length == 0) {
+        cantidad = servicio.consultar();
+      } else {
+        cantidad = servicio.consultar(args[0]); 
+      }
 
       System.out.printf("Cantidad %f%n", cantidad);
     } catch(Exception e) {}
