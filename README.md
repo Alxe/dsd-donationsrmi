@@ -8,5 +8,5 @@ Task to learn RMI, Object Oriented RPC counterpart of Java ecosystem.
 
 1. `$ gradle build`  
 2. `$ gradle jar`
-3. $ java -jar Server/build/libs/Server-0.1-ALPHA.jar &
-4. $ java -jar Client/build/libs/Client-0.1-ALPHA.jar ...
+3. `$ java -jar Server/build/libs/Server-0.1-ALPHA.jar &`
+4. `$ java -jar Client/build/libs/Client-0.1-ALPHA.jar ...`
